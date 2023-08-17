@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "wrangler pages dev --local ./pages",
+    "initlocaldb": "wrangler d1 execute dev --local --file=db/schema.sql",
+    "initdb": "wrangler d1 execute dev --file=db/schema.sql",
+    "pub": "wrangler pages deploy ./pages --branch production"
+  },
+  "dependencies": {
+    "hono": "^3.4.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.1.2"
+  }
+}
