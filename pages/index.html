@@ -100,7 +100,8 @@
         )
         try {
           const data = await res.json();
-          const url = window.location.href + data["uuid"];
+          const url = window.location.origin + "/" + data["uuid"];
+          output.value = "";
           addToOutput(`shared url: ${url}`);
         } catch (err) {
           addToOutput(err);
